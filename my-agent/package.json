@@ -1,0 +1,49 @@
+{
+  "name": "my-agent",
+  "version": "1.0.0",
+  "private": true,
+  "bin": {
+    "my-agent": "src/main.ts"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "start": "node src/main.ts",
+    "dev": "node --import ../pi/packages/coding-agent/src/experimental/source-resolver.ts src/main.ts",
+    "check": "tsc --noEmit",
+    "test": "node --test test/*.test.ts",
+    "pi": "pi",
+    "sync:pi": "node scripts/sync-pi.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Custom coding CLI built on the local Pi SDK",
+  "type": "module",
+  "dependencies": {
+    "@earendil-works/pi-agent-core": "file:./../pi/.artifacts/my-agent-initial/tarballs/earendil-works-pi-agent-core-1.1.0-697d4a66898d.tgz",
+    "@earendil-works/pi-ai": "file:./../pi/.artifacts/my-agent-initial/tarballs/earendil-works-pi-ai-1.1.0-aec87cc2957d.tgz",
+    "typebox": "1.3.36",
+    "@earendil-works/pi-coding-agent": "file:./../pi/.artifacts/my-agent-initial/tarballs/earendil-works-pi-coding-agent-1.1.0-72c4a70c807e.tgz"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.19",
+    "typescript": "7.0.2"
+  },
+  "overrides": {
+    "@earendil-works/chord": "file:./../pi/.artifacts/my-agent-initial/tarballs/earendil-works-chord-1.1.0-82c1f329fc90.tgz",
+    "@earendil-works/pi-agent-core": "file:./../pi/.artifacts/my-agent-initial/tarballs/earendil-works-pi-agent-core-1.1.0-697d4a66898d.tgz",
+    "@earendil-works/pi-ai": "file:./../pi/.artifacts/my-agent-initial/tarballs/earendil-works-pi-ai-1.1.0-aec87cc2957d.tgz",
+    "@earendil-works/pi-client": "file:./../pi/.artifacts/my-agent-initial/tarballs/earendil-works-pi-client-1.1.0-a3df5f2fd127.tgz",
+    "@earendil-works/pi-codemode": "file:./../pi/.artifacts/my-agent-initial/tarballs/earendil-works-pi-codemode-1.1.0-f00b1cd80ce1.tgz",
+    "@earendil-works/pi-coding-agent": "file:./../pi/.artifacts/my-agent-initial/tarballs/earendil-works-pi-coding-agent-1.1.0-72c4a70c807e.tgz",
+    "@earendil-works/pi-durable": "file:./../pi/.artifacts/my-agent-initial/tarballs/earendil-works-pi-durable-1.1.0-936154082b66.tgz",
+    "@earendil-works/pi-env": "file:./../pi/.artifacts/my-agent-initial/tarballs/earendil-works-pi-env-1.1.0-8984adaeacf4.tgz",
+    "@earendil-works/pi-mcp": "file:./../pi/.artifacts/my-agent-initial/tarballs/earendil-works-pi-mcp-1.1.0-fa00ccb77632.tgz",
+    "@earendil-works/pi-protocol": "file:./../pi/.artifacts/my-agent-initial/tarballs/earendil-works-pi-protocol-1.1.0-5cc6483897aa.tgz",
+    "@earendil-works/pi-server": "file:./../pi/.artifacts/my-agent-initial/tarballs/earendil-works-pi-server-1.1.0-c5eb9cd2ca84.tgz",
+    "@earendil-works/pi-telemetry": "file:./../pi/.artifacts/my-agent-initial/tarballs/earendil-works-pi-telemetry-1.1.0-f2000ad39ff6.tgz",
+    "@earendil-works/pi-tui": "file:./../pi/.artifacts/my-agent-initial/tarballs/earendil-works-pi-tui-1.1.0-60cfb38d28f2.tgz"
+  }
+}
